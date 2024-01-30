@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calendar">
+            <div class="input-container d-flex align-items-center">
+                <input type="text" name="date-control" id="date-control" class="form-control" placeholder="DD/MM/YYYY">
+            </div>
+            <div class="date-picker">
+                
+                <div class="month-container d-flex justify-content-between align-items-center">
+                    <div id="prev" class="actionable">
+                        <i class="bi bi-chevron-left"></i>
+                    </div>
+                    <div id="month-year">
+                    </div>
+                    <div id="next" class="actionable">
+                        <i class="bi bi-chevron-right"></i>
+                    </div>
+                </div>
+
+                <div class="date-container">
+                    <div id="week" class="week d-flex align-items-center justify-content-between">
+                    </div>
+                    <div id="dates" class="days d-flex flex-wrap align-items-center justify-content-between">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="js/index.js"></script>
+</body>
+</html>

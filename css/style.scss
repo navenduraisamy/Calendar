@@ -1,0 +1,142 @@
+$green-dark: #95cf1b;
+$green-light: #efffce;
+$grey: #f4f5f7;
+
+@import "/node_modules/bootstrap-icons/font/bootstrap-icons.min.css";
+
+@font-face {
+    font-family: "Roboto Regular";
+    src: url("../fonts/Roboto-Light.ttf");
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 14px;
+    font-family: "Roboto Regular";
+}
+
+.bi{
+    // font-size: 1.25rem;
+    font-weight: 900 !important;
+}
+
+.d-flex {
+    display: flex;
+    &.justify-content-between {
+        justify-content: space-between;
+    }
+
+    &.align-items-center {
+        align-items: center;
+    }
+
+    &.flex-wrap {
+        flex-wrap: wrap;
+    }
+}
+
+.actionable {
+    font-size: 1.25rem;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.form-control {
+    margin-left: 1rem;
+    height: 2rem;
+    outline: none;
+    border: 2px solid lightgrey;
+    border-radius: 5px;
+    padding: 0 0.5rem;
+    width: 110px;
+    font-family: "Roboto Regular";
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    &:focus {
+        border: 2px solid #248efd;
+    }
+}
+
+h4 {
+    letter-spacing: 0.5px;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .calendar {
+        width: 21rem;
+        border-radius: 10px;
+        border: 5px solid white;
+        box-shadow: 0 0 100px gray;
+
+        .input-container {
+            background-color: $grey;
+            height: 4rem;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .date-picker {
+            .month-container {
+                height: 5rem;
+                padding: 0 1rem;
+            }
+
+            .date-container {
+                min-height: 18rem;
+                padding-bottom: 1rem;
+
+                .week {
+                    padding: 0 1rem;
+                    font-size: 0.9rem;
+                }
+
+                .days {
+                    margin-top: 0.5rem;
+                    width: 100%;
+                    .date-item{
+                        width: 3rem;
+                        height: 3rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 1rem;
+                        cursor: pointer;
+
+                        &.disabled {
+                            // pointer-events: none;
+                            color: lightgrey;
+                            &:hover {
+                                background-color: white;
+                                cursor: default;
+                            }
+                        }
+
+                        &.picked {
+                            background-color: $green-dark;
+                            font-weight: bold;
+                            color: white;
+                            &:hover {
+                                background-color: $green-dark;
+                            }
+                        }
+
+                        &:hover {
+                            background-color: $green-light;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

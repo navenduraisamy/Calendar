@@ -1,0 +1,96 @@
+@import url(/node_modules/bootstrap-icons/font/bootstrap-icons.min.css);
+@font-face {
+  font-family: "Roboto Regular";
+  src: url("../fonts/Roboto-Light.ttf"); }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 14px;
+  font-family: "Roboto Regular"; }
+
+.bi {
+  font-weight: 900 !important; }
+
+.d-flex {
+  display: flex; }
+  .d-flex.justify-content-between {
+    justify-content: space-between; }
+  .d-flex.align-items-center {
+    align-items: center; }
+  .d-flex.flex-wrap {
+    flex-wrap: wrap; }
+
+.actionable {
+  font-size: 1.25rem; }
+  .actionable:hover {
+    cursor: pointer; }
+
+.form-control {
+  margin-left: 1rem;
+  height: 2rem;
+  outline: none;
+  border: 2px solid lightgrey;
+  border-radius: 5px;
+  padding: 0 0.5rem;
+  width: 110px;
+  font-family: "Roboto Regular";
+  font-weight: 700;
+  letter-spacing: 2px; }
+  .form-control:focus {
+    border: 2px solid #248efd; }
+
+h4 {
+  letter-spacing: 0.5px; }
+
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .container .calendar {
+    width: 21rem;
+    border-radius: 10px;
+    border: 5px solid white;
+    box-shadow: 0 0 100px gray; }
+    .container .calendar .input-container {
+      background-color: #f4f5f7;
+      height: 4rem;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px; }
+    .container .calendar .date-picker .month-container {
+      height: 5rem;
+      padding: 0 1rem; }
+    .container .calendar .date-picker .date-container {
+      min-height: 18rem;
+      padding-bottom: 1rem; }
+      .container .calendar .date-picker .date-container .week {
+        padding: 0 1rem;
+        font-size: 0.9rem; }
+      .container .calendar .date-picker .date-container .days {
+        margin-top: 0.5rem;
+        width: 100%; }
+        .container .calendar .date-picker .date-container .days .date-item {
+          width: 3rem;
+          height: 3rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 1rem;
+          cursor: pointer; }
+          .container .calendar .date-picker .date-container .days .date-item.disabled {
+            color: lightgrey; }
+            .container .calendar .date-picker .date-container .days .date-item.disabled:hover {
+              background-color: white;
+              cursor: default; }
+          .container .calendar .date-picker .date-container .days .date-item.picked {
+            background-color: #95cf1b;
+            font-weight: bold;
+            color: white; }
+            .container .calendar .date-picker .date-container .days .date-item.picked:hover {
+              background-color: #95cf1b; }
+          .container .calendar .date-picker .date-container .days .date-item:hover {
+            background-color: #efffce;
+            font-weight: bold; }
