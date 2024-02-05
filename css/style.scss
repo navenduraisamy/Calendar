@@ -2,8 +2,7 @@ $green-dark: #95cf1b;
 $green-light: #efffce;
 $grey: #f4f5f7;
 
-@import "/node_modules/bootstrap-icons/font/bootstrap-icons.min.css";
-
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 @font-face {
     font-family: "Roboto Regular";
     src: url("../fonts/Roboto-Light.ttf");
