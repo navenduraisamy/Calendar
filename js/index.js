@@ -14,6 +14,22 @@ function setFormControl(date) {
     document.querySelector("#date-control").value = date.toLocaleDateString("en-IN", formatOptions);
 }
 
+function parseDate(dateValue) {
+    let [day, month, year] = dateValue.split("/");
+    const jsDateObject = new Date(year, month - 1, day);
+    return jsDateObject;
+}
+
+document.querySelector("#date-control").addEventListener("keyup", (e) => {
+    let dateValue = e.target.value;
+    if (dateValue.length === 10) {
+        selectedDate = parseDate(dateValue);
+        currentDate = selectedDate;
+        renderDates(currentDate, selectedDate);
+        renderMonth(currentDate);
+    }
+})
+
 
 document.querySelector("#dates").addEventListener("click", (e) => {
     if (e.target.classList.contains("disabled"))
