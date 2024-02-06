@@ -14,7 +14,9 @@ export function renderDates(currentDate, selectedDate) {
             && currentDate.getMonth() === selectedDate.getMonth()
             && currentDate.getFullYear() === selectedDate.getFullYear()
         ) {
-            template += `<div class="date-item picked">${date}</div>`;
+            template += `<div class="date-item picked"
+            data-month=${currentDate.getMonth()} data-year=${currentDate.getFullYear()}
+            >${date}</div>`;
             return;
         }
         template += `<div 
